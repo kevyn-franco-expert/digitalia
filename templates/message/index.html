@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat in {{ room_name }}</title>
+    <link rel="stylesheet" href="{% static 'css/chat.css' %}">
+
+</head>
+<body>
+<div id="chatBox">
+    <!-- Messages will be displayed here -->
+</div>
+<form id="messageForm">
+    <input type="text" id="messageInput" autocomplete="off" required>
+    <button type="submit">Send</button>
+</form>
+
+<button id="return_id">Home</button>
+
+
+<script type="text/javascript">
+    var roomName = "{{ room_name }}";
+</script>
+
+<script src="{% static 'js/chat.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Options</title>
+    <link rel="stylesheet" href="{% static 'css/room.css' %}">
+
+</head>
+<body>
+<div id="joinChatForm">
+    <h2>Join a Chat</h2>
+    <form>
+        <label for="chatId">Enter Chat ID:</label><br>
+        <input type="text" id="chatId" name="chatId" required><br>
+        <input type="submit" value="Join Chat">
+    </form>
+</div>
+
+<div id="createChat">
+    <h2>Start a New Chat</h2>
+    <button onclick="window.location.href='/api/create-room/'">Create New Chat</button>
+</div>
+
+<div id="createChat">
+    {% include 'components/logout.html' %}
+</div>
+
+<script src="{% static 'js/room.js' %}"></script>
+</body>
+</html>
